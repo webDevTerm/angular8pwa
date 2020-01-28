@@ -13,7 +13,7 @@ export class MovieListComponent implements OnInit {
   constructor(private service: MoviesService) { }
 
   ngOnInit() {
-      this.service.searchMovies('spiderman');
+      this.service.searchMovies('bourne').subscribe(resp=>this.movies=resp.Search);
 
   }
 
